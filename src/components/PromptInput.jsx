@@ -23,7 +23,10 @@ const PromptInput = () => {
       updateConfig(config);
     }
 
-    // Efecto visual de carga o confirmación (opcional)
+    // Auto-scroll to preview for better Mobile UX
+    setTimeout(() => {
+      document.getElementById('preview-section')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   return (

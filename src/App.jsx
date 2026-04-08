@@ -79,7 +79,7 @@ const App = () => {
           </div>
         </div>
 
-        <div className="preview-section">
+        <div id="preview-section" className="preview-section">
           <h2 className="section-title serif">Vista Previa</h2>
           <MenuPreview />
         </div>
