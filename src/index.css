@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  /* Color Palettes - HSL */
+  --p-h: 160; /* Base Hue: Greenish */
+  --p-s: 84%;
+  --p-l: 39%;
+  
+  --primary: hsl(var(--p-h), var(--p-s), var(--p-l));
+  --accent: hsl(45, 90%, 50%); /* Gold/Yellow */
+  --bg-light: hsl(0, 0%, 98%);
+  --bg-dark: hsl(210, 20%, 12%);
+  --text-main: hsl(210, 20%, 15%);
+  --text-muted: hsl(210, 10%, 45%);
+  
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  
+  --shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+  --glass: rgba(255, 255, 255, 0.7);
+  
+  /* Layout */
+  --mobile-max: 480px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  max-width: var(--mobile-max);
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Base Utility Classes */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, hsl(200, 40%, 95%), hsl(160, 40%, 95%));
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.4s ease forwards;
+}
